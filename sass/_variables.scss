@@ -1,0 +1,99 @@
+//    Color
+//    number from Google-material design
+
+$white:                       #FFFFFF !default;  // White
+
+$black:                       #000000 !default;  // Black
+$black-light:                 #424242 !default;  // Grey-800
+$black-lighter:               #616161 !default;  // Grey-700
+
+$grey:                        #EEEEEE !default;  // Grey-200
+$grey-light:                  #F5F5F5 !default;  // Grey-100
+$grey-lighter:                #F5F5F5 !default;  // Grey-50
+$grey-dark:                   #E0E0E0 !default;  // Grey-300
+$grey-darker:                 #BDBDBD !default;  // Grey-400
+
+$mid-black:                   #9E9E9E !default;  // Grey-500
+
+$red:                         #E53935 !default;  // Red-600
+$red-light:                   #F44336 !default;  // Red-500
+$red-dark:                    #C62828 !default;  // Red-800
+
+
+//    Typography
+//    font, line-height ...
+
+$font-family:                 "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", Sans-serif, Verdana !default;
+
+$font-size-base:              14px !default;
+$font-size-small:             12px !default;
+$font-size-large:             16px !default;
+$font-size-larger:            18px !default;
+
+$font-size-h1:                24px !default;
+$font-size-h2:                20px !default;
+$font-size-h3:                $font-size-larger !default;
+$font-size-h4:                $font-size-large !default;
+$font-size-h5:                $font-size-base !default;
+$font-size-h6:                $font-size-small !default;
+
+
+//    Components
+//    padding, margin, border-radius, ...
+
+// width 960 1200
+
+$padding-base-vertical:       6px !default;
+$padding-base-horizontal:     12px !default;
+$padding-small-vertical:      0 !default;
+$padding-small-horizontal:    10px !default;
+$padding-large-vertical:      6px !default;
+$padding-large-horizontal:    18px !default;
+$padding-larger-vertical:     $padding-large-vertical !default;
+$padding-larger-horizontal:   $padding-large-horizontal !default;
+
+$border-base:                 4px !default;
+$border-small:                3px !default;
+$border-smaller:              1px !default;
+$border-large:                5px !default;
+$border-larger:               10px !default;
+
+$height-base:                 24px !default;
+$height-small:                22px !default;
+$height-large:                32px !default;
+$height-larger:               36px !default;
+
+$cursor-enable:               pointer !default;
+$cursor-disabled:             not-allowed !default;
+
+// $line-height-base:            1.428571429 !default;
+// $line-height-small:           1.5 !default;
+// $line-height-large:           1.3333333 !default;
+// $line-height-larger:          1.3333333 !default;
+
+//    Buttons
+
+$btn-height-base:             22px !default;
+$btn-height-small:            18px !default;
+$btn-height-large:            26px !default;
+$btn-height-larger:           30px !default;
+
+//    Label
+
+$label-height-base:           $height-base !default;
+$label-height-small:          $height-small !default;
+
+
+//    Pager
+
+$pager-height-base:           $height-large !default;
+$pager-height-small:          $height-base !default;
+
+
+//    Thumbnails
+
+$thumbnail-margin:            5px !default;
+
+//    transition
+$screen-trans:                .5s ease !default;
+$hover-trans:                 .2s ease !default;

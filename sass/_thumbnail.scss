@@ -1,0 +1,367 @@
+.thumbnail-sound {
+  display: inline-block;
+  width: 160px;
+  height: 230px;
+  padding: 5px 3px;
+  margin: $thumbnail-margin;
+  .cover {
+    margin: 5px auto;
+    height: 194px;
+    width: 154px;
+    .cover-img {
+      position: relative;
+      overflow: hidden;
+      height: 154px;
+      border-radius: $border-large;
+      margin-bottom: 5px;
+      img {
+        width: 100%;
+        height: 154px;
+      }
+      .time {
+        background-color: $black;
+        background-color: rgba(0, 0, 0, .7);
+        border-top-left-radius: $border-large;
+        border-bottom-right-radius: $border-large;
+        font-size: $font-size-small;
+        line-height: $font-size-small;
+        color: $white;
+        position: absolute;
+        padding: 4px 7px;
+        bottom: -20px;
+        right: 0;
+        transition: $hover-trans;
+      }
+    }
+    .title {
+      @include textarea-overflow(100%, 40px);
+      font-size: $font-size-small;
+      transition: color $hover-trans;
+      color: $black;
+    }
+    &:hover {
+      .cover-img {
+        .time {
+          bottom: 0;
+        }
+      }
+      .title {
+        color: $red-dark;
+      }
+    }
+  }
+  .detail {
+    width: 100%;
+    height: 15px;
+    .item {
+      padding-left: 18px;
+      margin-top: 2px;
+      line-height: 12px;
+      font-size: $font-size-small;
+      display: inline-block;
+      @include bg-img(58px, 12px);
+      @include text-overflow(58px);
+      float: left;
+      &.play-times {
+        background-position: -95px -80px;
+      }
+      &.comments {
+        background-position: -95px -110px;
+      }
+    }
+  }
+}
+
+.thumbnail-drama {
+  height: 165px;
+  width: 910px;
+  margin: 15px auto;
+  transition: $screen-trans;
+  img {
+    display: inline-block;
+    position: relative;
+    float: left;
+    height: 154px;
+    width: 154px;
+    margin: 5px 0 5px 10px;
+    border-radius: $border-large;
+    cursor: pointer;
+  }
+  .drama-detail {
+    display: inline-block;
+    height: 154px;
+    width: 710px;
+    margin: 5px 10px;
+    transition: $screen-trans;
+    .detail-title {
+      height: 30px;
+    }
+    .detail-meta {
+      height: 20px;
+    }
+    .label {
+      background-color: $grey-darker;
+      line-height: 18px;
+      font-size: $font-size-small;
+      border-radius: $border-base;
+      width: 75px;
+      height: 18px;
+      margin: 3px 0;
+      float: left;
+      text-align: center;
+    }
+    .name {
+      margin: 2px 10px;
+      font-size: $font-size-large;
+      line-height: 20px;
+      @include text-overflow(520px);
+      transition: $screen-trans;
+      a {
+        color: $black;
+        transition:  color $hover-trans;
+        &:hover {
+          color: $red-dark;
+        }
+      }
+    }
+    .name, .type, .cv, {
+      display: inline-block;
+    }
+    .cv, .type, .intro {
+      font-size: $font-size-small;
+    }
+    .cv, .type {
+      line-height: 18px;
+      @include text-overflow(190px);
+    }
+    .type {
+      margin-left: 1px
+    }
+    .intro {
+      margin: 5px 0;
+      color: $mid-black;
+      @include textarea-overflow(700px, 57px, 3);
+      transition: $screen-trans;
+    }
+  }
+}
+
+.thumbnail-channels {
+  display: inline-block;
+  height: 120px;
+  width: 260px;
+  padding: 5px;
+  margin: $thumbnail-margin;
+  .channel-img {
+    height: 110px;
+    width: 110px;
+    float: left;
+    margin: 5px;
+    margin-left: 0;
+    cursor: pointer;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: $border-large;
+    }
+  }
+  .title, .intro {
+    @include textarea-overflow(145px, 40px);
+    margin: 3px 0;
+  }
+  .title {
+    font-size: $font-size-base;
+    color: $black;
+    cursor: pointer;
+    transition: color $hover-trans;
+    &:hover {
+      color: $red-dark;
+    }
+  }
+  .intro {
+    font-size: $font-size-small;
+    color: $mid-black;
+  }
+}
+
+.thumbnail-uploader {
+  display: inline-block;
+  width: 250px;
+  height: 108px;
+  border: 1px solid $grey-dark;
+  border-radius: $border-large;
+  padding: 10px;
+  margin: $thumbnail-margin;
+  .uploader {
+    float: left;
+    width: 80px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 5px;
+    a {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+      img {
+        width: 70px;
+        height: 70px;
+        position: relative;
+      }
+    }
+  }
+  .detail {
+    .name {
+      font-size: $font-size-base;
+      line-height: 20px;
+      @include text-overflow(160px);
+      display: inline-block;
+      transition: color $hover-trans;
+      a {
+        color: $black;
+        &:hover {
+          color: $red-dark;
+        }
+      }
+    }
+    .sound-num, .fan-num {
+      font-size: $font-size-small;
+      line-height: 18px;
+      @include text-overflow(75px);
+      display: inline-block;
+    }
+    .intro {
+      color: $mid-black;
+      font-size: $font-size-small;
+      @include textarea-overflow(160px, 52px, 3);
+    }
+  }
+}
+
+.thumbnail-album {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 162px;
+  height: 210px;
+  border-radius: $border-large;
+  z-index: 0;
+  margin: 15px 5px 5px;
+  .cover {
+    z-index: 1;
+    img {
+      border-right: 1px solid transparent;
+    }
+    img, &:after, &:before {
+      width: 160px;
+      height: 160px;
+      box-sizing: border-box;
+      border-radius: $border-large;
+      border: 1px solid $grey-darker;
+    }
+    &:after, &:before {
+      position: absolute;
+      content: '';
+      background: $white;
+    }
+    &:before {
+      top: -3px;
+      left: 3px;
+      z-index: -1;
+    }
+    &:after {
+      top: -6px;
+      left: 6px;
+      z-index: -2;
+    }
+  }
+  .sound-num {
+    width: 159px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 50px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.02) 30%, $black 100%);
+    border-bottom-right-radius: $border-large;
+    padding-right: 10px;
+    box-sizing: border-box;
+    span {
+      float: right;
+      font-size: $font-size-small;
+      color: $white;
+    }
+    .sound-icon {
+      @include bg-img(14px);
+      background-position: -102px -1074px;
+      margin: 3px;
+    }
+  }
+  .title, .username {
+    @include text-overflow(160px);
+    margin-left: 4px;
+    transition: color $hover-trans;
+    display: block;
+  }
+  .title {
+    font-size: $font-size-base;
+    line-height: 20px;
+    color: $black;
+    &:hover {
+      color: $red-dark;
+    }
+  }
+  .username {
+    font-size: $font-size-small;
+    line-height: 18px;
+    color: $mid-black;
+    &:hover {
+      color: $black-lighter;
+    }
+  }
+}
+
+.thumbnail-404 {
+  display: block;
+  height: 250px;
+  width: 310px;
+  margin: 50px auto;
+  text-align: center;
+  .img-404 {
+    background: url(http://static.missevan.com/mimages/201605/18/3db888141654f610fffc200dbebe3ea7160227.png) no-repeat;
+    height: 200px;
+    width: 308px;
+    display: block;
+  }
+  .msg-404 {
+    display: block;
+    margin: 5px auto;
+    color: $mid-black;
+    font-size: $font-size-large;
+  }
+}
+
+.thumbnail-loading {
+  background: url(http://static.missevan.com/mimages/201603/29/f6b4a63596f56f2bc77d4fb467cab85c160911.gif);
+  width: 200px;
+  height: 230px;
+  transition: .5s;
+  background-size: 200px;
+  margin: 100px auto;
+}
+
+@media (min-width:1201px)  {
+  .thumbnail-drama {
+    width: 1050px;
+    .drama-detail {
+      width: 850px;
+      .name {
+        @include text-overflow(720px);
+      }
+      .intro {
+        @include textarea-overflow(840px, 57px, 3);
+      }
+    }
+  }
+}

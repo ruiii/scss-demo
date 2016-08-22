@@ -1,0 +1,50 @@
+.btn {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  cursor: $cursor-enable;
+  border: 1px solid transparent;
+  border-radius: $border-small;
+  margin: 3px;
+  box-sizing: border-box;
+}
+
+/*
+    $text-color-base, $bg-color-base, $boder-color-base,
+    $text-color-hover, $bg-color-hover, $boder-color-hover,
+    $text-color-disable: $text-color-hover,
+    $bg-color-disable: $bg-color-hover,
+    $boder-color-disable: $bg-color-hove
+*/
+.btn-red {
+  @include btn-define($white, $red, $red, $white, $red-light, $red-light);
+}
+.btn-white {
+  @include btn-define($black, $white, $grey-dark, $black, $grey-dark, $grey-dark, $grey-dark);
+}
+.btn-black {
+  @include btn-define($white, $black, $black, $white, $black-light, $black-light);
+}
+.btn-grey {
+  @include btn-define($grey-darker, $grey, $grey, $grey-darker, $grey, $grey);
+}
+.btn-more {
+  @include btn-define($black-lighter, $grey, $grey-dark, $black-lighter, $grey-darker, $grey-dark);
+}
+.btn-pm {
+  @include btn-define($grey-darker, $grey, $grey-dark, $red, $grey, $red);
+}
+
+.btn-base {
+  @include btn-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $btn-height-base);
+}
+.btn-small {
+  @include btn-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $btn-height-small);
+}
+.btn-large {
+  @include btn-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $btn-height-large);
+}
+.btn-larger {
+  @include btn-size($padding-larger-vertical, $padding-larger-horizontal, $font-size-large, $btn-height-larger);
+}

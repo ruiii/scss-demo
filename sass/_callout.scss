@@ -1,0 +1,20 @@
+.callout {
+  display: block;
+  font-size: $font-size-base;
+  padding-left: 10px;
+  border-left: 5px solid;
+  margin: 3px
+}
+
+.callout-red {
+  @extend .callout;
+  border-color: $red;
+}
+.callout-black {
+  @extend .callout;
+  border-color: $black;
+}
+.callout-grey {
+  @extend .callout;
+  border-color: $grey-dark;
+}

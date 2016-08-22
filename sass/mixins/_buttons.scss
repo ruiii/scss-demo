@@ -1,0 +1,39 @@
+@mixin btn-define($text-color-base, $bg-color-base, $boder-color-base,
+                  $text-color-hover, $bg-color-hover, $boder-color-hover,
+                  $text-color-disable: $text-color-hover,
+                  $bg-color-disable: $bg-color-hover,
+                  $boder-color-disable: $bg-color-hover) {
+  @extend .btn;
+  @include btn-style($text-color-base, $bg-color-base, $boder-color-base);
+
+  &:hover,
+  &:focus,
+  &.focus {
+    @include btn-style($text-color-hover, $bg-color-hover, $boder-color-hover);
+  }
+/*
+  &:active,
+  &.active {
+
+  }
+*/
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include btn-style($text-color-disable, $bg-color-disable, $boder-color-disable);
+  }
+}
+
+@mixin btn-style($text-color, $bg-color, $boder-color: transparent) {
+  color: $text-color;
+  background-color: $bg-color;
+  border-color: $boder-color;
+}
+
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $btn-height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  height: $btn-height;
+  line-height: ($btn-height - $padding-vertical * 2);
+}

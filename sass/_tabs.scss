@@ -1,0 +1,53 @@
+#tabs-warp {
+  #tabs {
+    padding: 10px 0;
+    transition: .2s;
+    ul {
+      border-bottom: $border-smaller solid $grey-dark;
+      text-align: center;
+      li {
+        display: inline-block;
+        font-size: $font-size-large;
+        width: 70px;
+        margin: 0 15px;
+        .tab {
+          color: $black;
+          border-bottom: $border-small solid transparent;
+          padding: 5px 0;
+          height: 100%;
+          width: 100%;
+          display: block;
+          transition: .3s ease;
+          &:hover, &.active {
+            border-bottom-color: $red;
+          }
+          &:focus {
+            -moz-user-select: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  #tab-pages {
+    .tab-content {
+      transition: $screen-trans;
+      display: none;
+      margin: 0 auto;
+      position: relative;
+      width: 960px;
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width:1201px) {
+    #tab-pages {
+      .tab-content {
+        width: 1100px;
+      }
+    }
+  }
+}

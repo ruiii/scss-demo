@@ -1,2 +1,5 @@
 sass/.sass-cache/
+sass/pages/
 guide.*
+*.map
+*.css

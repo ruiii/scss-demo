@@ -21,6 +21,7 @@
   &[disabled],
   fieldset[disabled] & {
     cursor: $cursor-disabled;
+    pointer-events: none;
     @include btn-style($text-color-disable, $bg-color-disable, $boder-color-disable);
   }
 }
@@ -35,5 +36,5 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   height: $btn-height;
-  line-height: ($btn-height - $padding-vertical * 2);
+  line-height: ($btn-height - $padding-vertical * 2 - 2);
 }

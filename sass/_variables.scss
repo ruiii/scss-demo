@@ -2,23 +2,27 @@
 //    number from Google-material design
 
 $white:                       #FFFFFF !default;  // White
-
 $black:                       #000000 !default;  // Black
-$black-light:                 #424242 !default;  // Grey-800
-$black-lighter:               #616161 !default;  // Grey-700
-
-$grey:                        #EEEEEE !default;  // Grey-200
-$grey-light:                  #F5F5F5 !default;  // Grey-100
-$grey-lighter:                #F5F5F5 !default;  // Grey-50
-$grey-dark:                   #E0E0E0 !default;  // Grey-300
-$grey-darker:                 #BDBDBD !default;  // Grey-400
 
 $mid-black:                   #9E9E9E !default;  // Grey-500
 
-$red:                         #E53935 !default;  // Red-600
+$red:                         #C14A3F !default;
 $red-light:                   #F44336 !default;  // Red-500
+$red-lighter:                 #D9665B !default;
 $red-dark:                    #C62828 !default;  // Red-800
 
+$blue:                        #369BD5 !default;
+
+$black-200:                   rgba(0, 0, 0, .2) !default;
+$black-300:                   rgba(0, 0, 0, .3) !default;
+$black-500:                   rgba(0, 0, 0, .5) !default;
+$black-800:                   rgba(0, 0, 0, .8) !default;
+$black-900:                   rgba(0, 0, 0, .9) !default;
+
+$white-200:                   rgba(255, 255, 255, .2) !default;
+$white-300:                   rgba(255, 255, 255, .3) !default;
+$white-500:                   rgba(255, 255, 255, .5) !default;
+$white-800:                   rgba(255, 255, 255, .8) !default;
 
 //    Typography
 //    font, line-height ...
@@ -57,43 +61,13 @@ $border-small:                3px !default;
 $border-smaller:              1px !default;
 $border-large:                5px !default;
 $border-larger:               10px !default;
-
-$height-base:                 24px !default;
-$height-small:                22px !default;
-$height-large:                32px !default;
-$height-larger:               36px !default;
+$border-half:                 50% !default;
 
 $cursor-enable:               pointer !default;
 $cursor-disabled:             not-allowed !default;
 
-// $line-height-base:            1.428571429 !default;
-// $line-height-small:           1.5 !default;
-// $line-height-large:           1.3333333 !default;
-// $line-height-larger:          1.3333333 !default;
-
-//    Buttons
-
-$btn-height-base:             22px !default;
-$btn-height-small:            18px !default;
-$btn-height-large:            26px !default;
-$btn-height-larger:           30px !default;
-
-//    Label
-
-$label-height-base:           $height-base !default;
-$label-height-small:          $height-small !default;
-
-
-//    Pager
-
-$pager-height-base:           $height-large !default;
-$pager-height-small:          $height-base !default;
-
-
-//    Thumbnails
-
-$thumbnail-margin:            5px !default;
-
 //    transition
+
 $screen-trans:                .5s ease !default;
 $hover-trans:                 .2s ease !default;
+$show-trans:                  .3s ease !default;

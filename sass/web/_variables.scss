@@ -1,0 +1,39 @@
+@import "../variables";
+//    Color
+//    number from Google-material design
+
+$black-light:                 #424242 !default;  // Grey-800
+$black-lighter:               #616161 !default;  // Grey-700
+
+$grey:                        #EEEEEE !default;  // Grey-200
+$grey-light:                  #F5F5F5 !default;  // Grey-100
+$grey-lighter:                #F5F5F5 !default;  // Grey-50
+$grey-dark:                   #E0E0E0 !default;  // Grey-300
+$grey-darker:                 #BDBDBD !default;  // Grey-400
+
+$mid-black:                   #9E9E9E !default;  // Grey-500
+
+$blue:                        #369BD5 !default;
+
+//    Buttons
+
+$btn-height-base:             22px !default;
+$btn-height-small:            18px !default;
+$btn-height-large:            26px !default;
+$btn-height-larger:           30px !default;
+
+//    Label
+
+$label-height-base:           $height-base !default;
+$label-height-small:          $height-small !default;
+
+
+//    Pager
+
+$pager-height-base:           $height-large !default;
+$pager-height-small:          $height-base !default;
+
+
+//    Thumbnails
+
+$thumbnail-margin:            5px !default;

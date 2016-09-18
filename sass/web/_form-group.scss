@@ -1,0 +1,310 @@
+.form-group {
+  display: block;
+  width: 410px;
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  .btn-red, .btn-white, .btn-black, .btn-text {
+    margin: 0;
+  }
+  .btn-red, .btn-white, .btn-black {
+    font-size: $font-size-large;
+    height: 42px;
+    line-height: 42px;
+    &.disabled {
+      background-color: $grey-darker;
+      border-color: $grey-darker;
+    }
+  }
+  .btn-white {
+    &:hover, &:focus, &.focus {
+      color: $red-dark;
+      background-color: $white;
+    }
+  }
+  .btn-black {
+    background-color: $black-light;
+    border-color: $black-light;
+    &:hover, &:focus, &.focus {
+      background-color: $grey-darker;
+      border-color: $grey-darker;
+    }
+  }
+  .btn-text {
+    font-size: $font-size-base;
+    line-height: $font-size-base;
+  }
+  .btn-block {
+    width: 400px;
+  }
+  .btn-half {
+    width: 182px;
+  }
+  .form-title, .form-sub-title {
+    margin: 20px 0;
+    display: block;
+  }
+  .form-title {
+    font-size: $font-size-larger;
+    color: $black;
+  }
+  .form-sub-title {
+    font-size: $font-size-base;
+    color: $grey-darker;
+  }
+  .form-img-title {
+    margin: 18px auto;
+    display: block;
+  }
+  .form-error-msg {
+    display: none;
+    font-size: $font-size-small;
+    color: $red-dark;
+    position: absolute;
+    margin: 5px 0;
+    height: 16px;
+    line-height: 16px;
+  }
+  .divider {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    border-bottom: 1px solid $grey-dark;
+  }
+  input,
+  input[type="text"],
+  input[type="checkbox"],
+  input[type="password"] {
+    color: $black;
+    box-sizing: border-box;
+    font-size: $font-size-base;
+    background-color: $white;
+    border-radius: $border-base;
+    border: 1px solid $grey-dark;
+  }
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    width: 400px;
+    height: 42px;
+    line-height: 30px;
+    padding: 5px 10px;
+  }
+  input[type="submit"] {
+    @extend .btn-red;
+  }
+  .img-input {
+    display: block;
+    position: relative;
+    margin: 22px 0;
+    .form-error-msg {
+      top: 40px;
+    }
+    &.error {
+      input {
+        border-color: $red-dark;
+      }
+      .form-error-msg {
+        display: block;
+      }
+    }
+  }
+  #username,
+  #password,
+  #re-password,
+  #email,
+  #tel,
+  #verification,
+  #nickname {
+    input {
+      padding-left: 32px;
+    }
+    div:first-child {
+      @include bg-img(22px);
+      position: absolute;
+      display: block;
+      top: 9px;
+      left: 6px;
+    }
+  }
+  #username, #tel, #email {
+    div:first-child {
+      background-position: -593px -371px;
+    }
+  }
+  #password, #re-password {
+    div:first-child {
+      background-position: -593px -401px;
+    }
+  }
+  #verification {
+    div:first-child {
+      background-position: -593px -430px;
+    }
+  }
+  #nickname {
+    div:first-child {
+      background-position: -593px -460px;
+    }
+  }
+  .btn-red-img {
+    &, &:hover, &:focus, &.focus {
+      border: 1px solid $grey-dark;
+    }
+  }
+  .form-row {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px 0;
+    .row-left, .row-right {
+      position: absolute;
+    }
+    .row-left {
+      left: 0;
+    }
+    .row-right {
+      right: 0;
+    }
+  }
+  .btn-row {
+    margin: 28px 0;
+    line-height: 42px;
+    height: 42px;
+  }
+  .check-row {
+    &, label, .btn-text {
+      line-height: 20px;
+      height: 20px;
+    }
+    label {
+      cursor: pointer;
+      font-size: $font-size-base;
+      color: $black;
+      float: left;
+    }
+    .form-checkbox {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+  .bottom-row {
+    margin: 28px 0;
+    height: 25px;
+    line-height: 25px;
+  }
+  .verification-row {
+    height: 42px;
+    line-height: 42px;
+    margin: 20px 0;
+    .row-left {
+      box-sizing: border-box;
+      line-height: 30px;
+      &, input {
+        width: 230px;
+        display: inline-block;
+        margin: 0;
+      }
+    }
+    .row-right {
+      width: 140px;
+    }
+    .form-error-msg {
+      top: 40px;
+    }
+    &.error {
+      input {
+        border-color: $red-dark;
+      }
+      .form-error-msg {
+        display: block;
+      }
+    }
+    #btn-get-code {
+      &.btn-loading {
+        @extend .btn-red.disabled;
+        &:after {
+          content: '';
+          @include bg-img(17px);
+          background-position: -100px -1141px;
+          display: inline-block;
+          position: relative;
+          margin: 0 auto;
+          -webkit-animation:spin 3s linear infinite;
+          -moz-animation:spin 3s linear infinite;
+          animation:spin 3s linear infinite;
+        }
+      }
+    }
+  }
+  .thirdparty-row {
+    height: 36px;
+    line-height: 36px;
+    span, a {
+      display: inline-block;
+    }
+    .row-left, .row-right {
+      height: 36px;
+      line-height: 36px;
+    }
+    .row-left {
+      font-size: $font-size-base;
+      color: $black;
+    }
+    .login-qq, .login-weibo {
+      @include bg-img(34px);
+      border-radius: $border-half;
+      cursor: pointer;
+      margin: 0 15px;
+    }
+    .login-qq {
+      margin-left: 90px;
+      background-position: -544px -41px;
+      &:hover, &:focus {
+        background-position: -544px -76px;
+      }
+    }
+    .login-weibo {
+      background-position: -544px -112px;
+      &:hover, &:focus {
+        background-position: -544px -147px;
+      }
+    }
+  }
+  .form-img-title {
+    @include bg-img(175px, 39px);
+    background-position: -686px -952px;
+  }
+}
+:root #check-row-before,
+:root #modal-check-row-before {
+    position: absolute;
+    left: -1000em;
+}
+:root #check-row-before + label:before,
+:root #modal-check-row-before + label:before {
+  content: "";
+  display: inline-block;
+  width  : 14px;
+  height : 14px;
+  margin : 0 .5em 0 0;
+  border-radius: $border-small;
+  border: 1px solid $grey-darker;
+  background-color: $white;
+  vertical-align: bottom;
+  position: relative;
+  bottom: 2px;
+}
+:root #check-row-before:checked + label:before,
+:root #modal-check-row-before:checked + label:before {
+  background-color: $red;
+  border-color: $red;
+}
+:root #check-row-before:checked + label:after,
+:root #modal-check-row-before:checked + label:after {
+  content: '✔';
+  color: $white;
+  top: -1px;
+  left: 5px;
+  position: absolute;
+}

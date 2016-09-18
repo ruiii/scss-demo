@@ -1,0 +1,105 @@
+.Input {
+  input, textarea {
+    display: inline-block;
+    color: $white-800;
+    background-color: $black-800;
+    border-radius: $border-base;
+    border: 1px solid $white-800;
+    padding: 5px 15px;
+    width: 100%;
+    &:focus, &:hover {
+      outline-width: 0;
+      color: $white;
+      border-color: $white;
+    }
+  }
+  .btn, input, textarea {
+    margin: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  &.light {
+    input, textarea, .btn {
+      color: $black;
+      background-color: $white-800;
+      border-color: transparent;
+      &:focus, &:hover {
+        background-color: $white;
+      }
+    }
+    &.group {
+      &.before {
+        .btn {
+          &, &:hover, &:active, &:focus {
+            border-right-color: $black-200;
+          }
+        }
+        input {
+          &, &:hover, &:active, &:focus {
+            border-left-color: $black-200;
+          }
+        }
+      }
+      &.after {
+        .btn {
+          &, &:hover, &:active, &:focus {
+            border-left-color: $black-200;
+          }
+        }
+        input {
+          &, &:hover, &:active, &:focus {
+            border-right-color: $black-200;
+          }
+        }
+      }
+    }
+  }
+  &.label-top, &.label-left {
+    display: flex;
+    align-items: flex-start;
+    .label, input, textarea {
+      margin: 5px 2px;
+    }
+  }
+  &.label-top {
+    flex-direction: column;
+  }
+  &.group {
+    display: flex;
+    flex-direction: row;
+    &.before {
+      flex-direction: row-reverse;
+      .btn {
+        border-right-color: $white-800;
+        border-radius: $border-base 0 0 $border-base;
+        &:hover, &:active, &:focus {
+          border-right-color: $white;
+        }
+      }
+      input {
+        border-left-color: $white-800;
+        border-radius: 0 $border-base $border-base 0;
+        &:hover, &:active, &:focus {
+          border-right-color: $white;
+        }
+      }
+    }
+    &.after {
+      .btn {
+        border-left-color: $white-800;
+        border-radius: 0 $border-base $border-base 0;
+        &:hover, &:active, &:focus {
+          border-right-color: $white;
+        }
+      }
+      input {
+        border-right-color: $white-800;
+        border-radius: $border-base 0 0 $border-base;
+        &:hover, &:active, &:focus {
+          border-right-color: $white;
+        }
+      }
+    }
+  }
+}

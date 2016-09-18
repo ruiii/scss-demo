@@ -1,14 +1,11 @@
-@import './variables';
-@import './mixins/buttons';
-@import './mixins/mixins';
-@import './buttons';
-@import "./button-groups";
-@import './callout';
-@import "./thumbnail";
-@import "./tabs";
-@import "./pagination";
-
-body {
-  background-color: $white;
-  font-family: $font-family;
-}
+@import 'variables';
+@import 'mixins/buttons';
+@import 'mixins/mixins';
+@import "mixins/animate";
+@import 'buttons';
+@import "button-groups";
+@import 'callout';
+@import "thumbnail";
+@import "tabs";
+@import "pagination";
+@import "form-group";

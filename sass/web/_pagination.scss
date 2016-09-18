@@ -1,0 +1,124 @@
+.pagination {
+  display: block;
+  position: relative;
+  margin: 20px auto 50px;
+  text-align: center;
+  li {
+    display: inline-block;
+    border: $border-smaller solid $grey-dark;
+    border-radius: $border-base;
+    color: $grey-darker;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: $screen-trans;
+    min-width: 30px;
+    font-size: $font-size-large;
+    line-height: 20px;
+    height: 20px;
+    &.active, &.disable {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    &:hover, &:focus, &.active {
+      background-color: $grey-darker;
+      color: $white;
+    }
+    &.disable {
+      background-color: $grey-dark;
+      color: $white;
+    }
+  }
+  &:not(.main-site) {
+    li {
+      &:first-child,
+      &:last-child {
+        min-width: 35px;
+      }
+      &:first-child:after {
+        content: "<<";
+      }
+      &:last-child:after {
+        content: ">>";
+      }
+      &:nth-child(2):after {
+        content: "<";
+      }
+      &:nth-last-child(2):after {
+        content: ">";
+      }
+    }
+  }
+  &.main-site {
+    $main-a-color: #4d4d4d !default;
+    a {
+      color: $main-a-color;
+    }
+    li {
+      border-radius: 2px;
+      margin: 0;
+      padding: 9px 0;
+      font-size: 13px;
+      min-width: inherit;
+      color: $main-a-color;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        padding: 9px 15px;
+        transition: $screen-trans;
+      }
+      &:hover, &:focus, &.active {
+        color: #f3f3f3;
+        background-color: $main-a-color;
+        a {
+          color: #f3f3f3;
+        }
+      }
+      &.ellipsis, &.pagination-goto {
+        border-color: transparent;
+        cursor: default;
+        &:hover {
+          color: $main-a-color;
+          background: none;
+        }
+      }
+      &.ellipsis {
+        pointer-events: none;
+      }
+      &.pagination-goto {
+        color: $main-a-color;
+        .gotopage-input {
+          padding: 9px 5px;
+          margin: 0 8px;
+          width: 60px;
+          background: transparent;
+          color: $black;
+          border: $border-smaller solid $grey-dark;
+          border-radius: 2px;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+    }
+    &.ajax {
+      li {
+        padding: 9px 15px;
+        &.disable {
+          background-color: $grey-dark;
+          color: $main-a-color;
+        }
+      }
+    }
+  }
+  &.simple {
+    li {
+      border-color: transparent;
+      &:hover, &:focus, &.active {
+        background: none;
+        color: $black;
+      }
+    }
+  }
+}

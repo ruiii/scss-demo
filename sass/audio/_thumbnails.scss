@@ -1,0 +1,21 @@
+.list-item {
+  font-size: $font-size-larger;
+  color: $white;
+  height: 36px;
+  img {
+    float: left;
+    width: 36px;
+    height: 36px;
+  }
+  .nickname {
+    display: inline-block;
+    text-decoration: none;
+    @include text-overflow(85px);
+    color: $white;
+    margin-left: 15px;
+    padding: 0;
+    font-size: $font-size-larger;
+    height: 36px;
+    line-height: 36px;
+  }
+}

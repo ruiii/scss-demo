@@ -35,6 +35,7 @@
     }
     .title {
       @include textarea-overflow(100%, 40px);
+      float: left;
       font-size: $font-size-small;
       transition: color $hover-trans;
       color: $black;
@@ -48,6 +49,11 @@
       .title {
         color: $red-dark;
       }
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
     }
   }
   .detail {
@@ -168,6 +174,7 @@
   .title, .intro {
     @include textarea-overflow(145px, 40px);
     margin: 3px 0;
+    display: block;
   }
   .title {
     font-size: $font-size-base;
@@ -233,6 +240,7 @@
       display: inline-block;
     }
     .intro {
+      float: left;
       color: $mid-black;
       font-size: $font-size-small;
       @include textarea-overflow(160px, 52px, 3);
@@ -253,6 +261,7 @@
     z-index: 1;
     img {
       border-right: 1px solid transparent;
+      background-color: $white;
     }
     img, &:after, &:before {
       width: 160px;
@@ -322,6 +331,146 @@
   }
 }
 
+.thumbnail-cv {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 80px;
+  width: 260px;
+  padding: 5px 10px;
+  margin: 10px $thumbnail-margin;
+  transition: $screen-trans;
+  .img {
+    display: inline-block;
+    float: left;
+    height: 70px;
+    width: 70px;
+    img {
+      height: 70px;
+      width: 70px;
+      border-radius: $border-half;
+    }
+  }
+  .detail {
+    display: inline-block;
+    height: 70px;
+    width: 150px;
+    margin: 0 10px;
+    .name {
+      font-size: $font-size-base;
+      line-height: 20px;
+      font-weight: bold;
+      margin: 6px auto;
+    }
+    .organization, .role {
+      font-size: $font-size-small;
+      line-height: 18px;
+      margin: 3px auto;
+    }
+    .name, .organization, .role {
+      display: block;
+      @include text-overflow(140px);
+    }
+  }
+  &.search {
+    width: 910px;
+    height: 160px;
+    display: block;
+    margin: 10px auto;
+    box-sizing: border-box;
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 850px;
+      margin: 0 auto;
+      border-bottom: 1px solid $grey-dark;
+      transition: $screen-trans;
+    }
+    .img, .detail, .works, .works .title {
+      transition: $screen-trans;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    .img {
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: $border-half;
+      }
+    }
+    .detail {
+      width: 350px;
+      height: 100%;
+      position: relative;
+      .name {
+        margin: 36px 0 15px;
+        font-size: $font-size-h2;
+        line-height: 20px;
+        font-weight: bold;
+        @include text-overflow(200px);
+        a {
+          color: $black;
+          transition: color $hover-trans;
+          display: block;
+          &:hover {
+            color: $red-dark;
+          }
+        }
+      }
+      .intro {
+        display: block;
+        font-size: $font-size-base;
+        color: $mid-black;
+        margin: 0;
+        @include textarea-overflow(335px, 40px, 2);
+      }
+    }
+    .works {
+      width: 360px;
+      display: block;
+      float: right;
+      margin-right: 12px;
+      text-align: right;
+      li {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        margin: 20px 10px;
+        a {
+          display: block;
+          position: relative;
+          &, img {
+            height: 100%;
+            width: 100%;
+            border-radius: $border-larger;
+          }
+          .title {
+            position: absolute;
+            bottom: 0;
+            font-size: $font-size-small;
+            padding: 2px;
+            color: $white;
+            background-color: rgba(0,0,0,.5);
+            transition: color $hover-trans;
+            border-bottom-left-radius: $border-larger;
+            border-bottom-right-radius: $border-larger;
+            @include text-overflow(100%);
+            text-align: center;
+          }
+          &:hover {
+            .title {
+              text-shadow: 0 0 3px $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .thumbnail-404 {
   display: block;
   height: 250px;
@@ -361,6 +510,18 @@
       }
       .intro {
         @include textarea-overflow(840px, 57px, 3);
+      }
+    }
+  }
+  .thumbnail-cv.search {
+    width: 1050px;
+    &:after {
+      width: 980px;
+    }
+    .detail {
+      width: 495px;
+      .intro {
+        @include textarea-overflow(470px, 40px, 2);
       }
     }
   }

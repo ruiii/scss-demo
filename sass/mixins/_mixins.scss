@@ -11,13 +11,12 @@
   word-break: break-all;
   text-overflow: ellipsis;
   overflow: hidden;
-  display: -moz-box;                /* Mozilla */
+  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-line-clamp: $lines;
-  display: -webkit-box;             /* WebKit */
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $lines;
-  display: box;                     /* As specified */
   box-orient: vertical;
   line-clamp: $lines;
   line-height: $height / $lines;
@@ -27,4 +26,12 @@
   background: url(http://static.missevan.com/system/missevan_icons.png) no-repeat;
   height: $height;
   width: $width;
+}
+
+@mixin pointer-event {
+  cursor: pointer;
+  &.active, &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }

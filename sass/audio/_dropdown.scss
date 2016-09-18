@@ -1,0 +1,35 @@
+.DropdownMenu {
+  .btn {
+    display: inline-block;
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: .3em;
+      vertical-align: middle;
+      text-align: right;
+      content: "";
+      border-top: .3em solid;
+      border-right: .3em solid transparent;
+      border-left: .3em solid transparent;
+    }
+  }
+  .content {
+    display: none;
+    position: absolute;
+    height: auto;
+    &.show {
+      display: block;
+    }
+    .MenuItem {
+      display: block;
+      min-width: 50px;
+      &.item {
+        @extend .btn.inline;
+        border-color: transparent;
+        border-radius: 0;
+        padding: 2px 5px;
+      }
+    }
+  }
+}

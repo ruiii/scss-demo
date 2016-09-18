@@ -1,0 +1,61 @@
+.Popover {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+  transition: $show-trans;
+  .content {
+    height: 100%;
+    .title, .body {
+      position: relative;
+      background-color: $black;
+      border: 1px solid $white;
+      border-radius: $border-base;
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      line-height: 40px;
+      flex-shrink: 0;
+      color: $white;
+      font-size: $font-size-base;
+      padding: 10px 20px;
+      border-bottom: 1px solid transparent;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .body {
+      height: 93%;
+      padding: 15px 10px;
+      overflow: hidden;
+    }
+    .arrow {
+      bottom: 0;
+      left: 80%;
+      border: $border-larger + 1 solid transparent;
+      border-top-color: $white;
+      &, &:after {
+        display: block;
+        position: relative;
+        width: 0;
+        height: 0;
+      }
+      &:after {
+        content: '';
+        border: $border-larger solid transparent;
+        border-top-color: $black;
+        top: -12px;
+        left: -10px;
+      }
+    }
+  }
+  &.title {
+    .content .body {
+      height: calc(98% - 40px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

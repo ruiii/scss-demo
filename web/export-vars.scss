@@ -17,6 +17,20 @@ $mid-black:                   #9E9E9E !default;  // Grey-500
 
 $blue:                        #369BD5 !default;
 
+$padding-base-vertical:       6px !default;
+$padding-base-horizontal:     12px !default;
+$padding-small-vertical:      0 !default;
+$padding-small-horizontal:    10px !default;
+$padding-large-vertical:      6px !default;
+$padding-large-horizontal:    18px !default;
+$padding-larger-vertical:     $padding-large-vertical !default;
+$padding-larger-horizontal:   $padding-large-horizontal !default;
+
+$height-base:                 24px !default;
+$height-small:                22px !default;
+$height-large:                32px !default;
+$height-larger:               36px !default;
+
 //    Buttons
 
 $btn-height-base:             22px !default;
@@ -33,8 +47,3 @@ $label-height-small:          $height-small !default;
 
 $pager-height-base:           $height-large !default;
 $pager-height-small:          $height-base !default;
-
-
-//    Thumbnails
-
-$thumbnail-margin:            5px !default;

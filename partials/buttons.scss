@@ -1,17 +1,4 @@
 .btn {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  cursor: $cursor-enable;
-  border: 1px solid transparent;
-  border-radius: $border-small;
-  margin: 3px;
-  box-sizing: border-box;
-  transition: color $hover-trans,
-              background-color $hover-trans,
-              background $hover-trans,
-              border-color $hover-trans;
   &.inline {
     height: 27px;
     line-height: 25px;

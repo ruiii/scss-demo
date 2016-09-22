@@ -68,6 +68,9 @@
   &.group {
     display: flex;
     flex-direction: row;
+    .btn, input {
+      height: inherit;
+    }
     &.before {
       flex-direction: row-reverse;
       .btn {

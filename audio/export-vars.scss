@@ -1,24 +1,3 @@
 @import "../modules/variables";
 @import "../modules/mixins";
 @import "../modules/animate";
-
-//    Color
-
-$green:                       #5BB335 !default;
-$yellow:                      #FDF9CE !default;
-
-$grey-darker:                 #3D3D3D !default;
-$grey-500:                    #BDBDBD !default;
-
-$online:                      $red !default;
-$offline:                     #575757 !default;
-$broadcasting:                $green !default;
-
-//    Thumbnails
-
-$thumbnail-margin:            5px !default;
-
-$nav-height: 41px !default;
-$player-bar-height: 50px !default;
-$black-light: #222222 !default;
-$black-lighter: #333333 !default;

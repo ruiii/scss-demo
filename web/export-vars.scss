@@ -1,3 +1,7 @@
+@import "../modules/variables";
+@import "../modules/mixins";
+@import "../modules/animate";
+
 //    Color
 //    number from Google-material design
 
@@ -25,7 +29,6 @@ $btn-height-larger:           30px !default;
 
 $label-height-base:           $height-base !default;
 $label-height-small:          $height-small !default;
-
 
 //    Pager
 

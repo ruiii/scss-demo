@@ -12,4 +12,8 @@
       background-color: $white-500;
     }
   }
+  &.icon {
+    @include pointer-event();
+    @include bg-img(36px);
+  }
 }

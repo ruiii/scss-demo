@@ -1,3 +1,8 @@
+/*
+  define
+    $toast-bg-color
+*/
+
 .Toast {
   display: inline-block;
   position: absolute;
@@ -8,7 +13,7 @@
   margin: 10px auto;
   font-size: $font-size-base;
   color: $white;
-  background-color: $grey-darker;
+  background-color: $toast-bg-color;
   transition: opacity $screen-trans, top $show-trans;
   border-radius: $border-base;
   opacity: 0;

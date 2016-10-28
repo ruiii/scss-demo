@@ -9,7 +9,7 @@
     .title, .body {
       position: relative;
       background-color: $black;
-      border: 1px solid $white;
+      border: $border-smaller solid $white;
       border-radius: $border-base;
     }
     .title {
@@ -22,9 +22,6 @@
       color: $white;
       font-size: $font-size-base;
       padding: 10px 20px;
-      border-bottom: 1px solid transparent;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
     }
     .body {
       height: 93%;
@@ -35,7 +32,6 @@
       bottom: 0;
       left: 80%;
       border: $border-larger + 1 solid transparent;
-      border-top-color: $white;
       &, &:after {
         display: block;
         position: relative;
@@ -46,16 +42,50 @@
         content: '';
         border: $border-larger solid transparent;
         border-top-color: $black;
-        top: -12px;
         left: -10px;
       }
     }
   }
-  &.title {
-    .content .body {
-      height: calc(98% - 40px);
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+  &.title .content .body {
+    height: calc(98% - 40px);
+  }
+  &[direction=up] {
+    &.title .content .body {
+      border-radius: 0 0 $border-base $border-base;
+    }
+    .content {
+      .title {
+        border-radius: $border-base $border-base 0 0;
+        border-bottom: none;
+      }
+      .arrow {
+        border-top-color: $white;
+        &:after {
+          top: -12px;
+        }
+      }
+    }
+  }
+  &[direction=down] {
+    &.title .content .body {
+      border-radius: $border-base $border-base 0 0;
+    }
+    .content {
+      display: flex;
+      flex-direction: column-reverse;
+      .title {
+        border-radius: 0 0 $border-base $border-base;
+        border-top: none;
+      }
+      .arrow {
+        left: 13px;
+        border-bottom-color: $white;
+        &:after {
+          top: -8px;
+          border-top-color: transparent;
+          border-bottom-color: $black;
+        }
+      }
     }
   }
 }

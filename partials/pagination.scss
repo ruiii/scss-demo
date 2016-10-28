@@ -1,3 +1,6 @@
+$pagination-dark:   $grey-dark !default;
+$pagination-darker: $grey-darker !default;
+
 .pagination {
   display: block;
   position: relative;
@@ -5,9 +8,10 @@
   text-align: center;
   li {
     display: inline-block;
-    border: $border-smaller solid $grey-dark;
+    box-sizing: border-box;
+    border: $border-smaller solid $pagination-dark;
     border-radius: $border-base;
-    color: $grey-darker;
+    color: $pagination-darker;
     text-align: center;
     margin: 5px;
     padding: 5px;
@@ -16,17 +20,17 @@
     min-width: 30px;
     font-size: $font-size-large;
     line-height: 20px;
-    height: 20px;
+    height: 40px;
     &.active, &.disable {
       cursor: not-allowed;
       pointer-events: none;
     }
     &:hover, &:focus, &.active {
-      background-color: $grey-darker;
+      background-color: $pagination-darker;
       color: $white;
     }
     &.disable {
-      background-color: $grey-dark;
+      background-color: $pagination-dark;
       color: $white;
     }
   }
@@ -88,6 +92,8 @@
         pointer-events: none;
       }
       &.pagination-goto {
+        padding: 0 15px;
+        border: none;
         color: $main-a-color;
         .gotopage-input {
           padding: 9px 5px;
@@ -95,7 +101,7 @@
           width: 60px;
           background: transparent;
           color: $black;
-          border: $border-smaller solid $grey-dark;
+          border: $border-smaller solid $pagination-dark;
           border-radius: 2px;
           line-height: 20px;
           text-align: center;
@@ -106,7 +112,7 @@
       li {
         padding: 9px 15px;
         &.disable {
-          background-color: $grey-dark;
+          background-color: $pagination-dark;
           color: $main-a-color;
         }
       }

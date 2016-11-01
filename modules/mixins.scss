@@ -23,7 +23,7 @@
 }
 
 @mixin bg-img($width, $height: $width) {
-  background: url(http://static.missevan.com/system/missevan_icons.png) no-repeat;
+  background: url(//static.missevan.com/system/missevan_icons.png) no-repeat;
   height: $height;
   width: $width;
 }

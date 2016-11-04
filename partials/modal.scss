@@ -13,12 +13,12 @@
   z-index: 777;
   .content {
     position: relative;
-    color: $white;
+    color: $black;
     width: 486px;
-    background-color: $black;
+    background-color: $white;
     border-radius: $border-base;
     .title, .body {
-      border: 1px solid $white;
+      border: 1px solid $black-200;
       border-radius: $border-base;
     }
     .title {
@@ -28,14 +28,25 @@
       font-size: $font-size-base;
       height: 40px;
       line-height: 40px;
-      padding: 10px 20px;
-      border-bottom: transparent;
+      padding: 10px 10px 10px 20px;
+      border-bottom: none;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      .btn.close {
+        margin: 0;
+        padding: 0 10px;
+        color: $black;
+        opacity: 0.5;
+        transition: opacity $hover-trans;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
     .body {
       padding: 10px 20px;
       height: calc(100% - 40px);
+      border-top: none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }

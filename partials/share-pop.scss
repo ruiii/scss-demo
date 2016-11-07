@@ -1,4 +1,3 @@
-
 #SharePop {
   display: block;
   position: fixed;
@@ -44,6 +43,20 @@
         width: 50px;
         background: no-repeat center;
         background-size: 50px;
+      }
+      &.wechat {
+        .wechat-qrcode {
+          display: none;
+        }
+        &.show {
+          .wechat-qrcode {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 102px;
+            z-index: 1;
+          }
+        }
       }
       &.wechat:before {
         background-image: url('/assets/images/sound/share-wechat.png');

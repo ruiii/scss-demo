@@ -92,7 +92,7 @@ $pagination-darker: $grey-darker !default;
         pointer-events: none;
       }
       &.pagination-goto {
-        padding: 0 15px;
+        padding: 0 15px !important;
         border: none;
         color: $main-a-color;
         .gotopage-input {
@@ -124,6 +124,20 @@ $pagination-darker: $grey-darker !default;
       &:hover, &:focus, &.active {
         background: none;
         color: $black;
+      }
+    }
+  }
+  &.small {
+    li {
+      height: 20px;
+      line-height: 20px;
+      border: none;
+      &.page {
+        padding: 0 2px;
+      }
+      &:hover, &:focus, &.active {
+        background: none;
+        color: $red;
       }
     }
   }

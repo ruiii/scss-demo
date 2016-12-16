@@ -17,6 +17,7 @@
   transition: opacity $screen-trans, top $show-trans;
   border-radius: $border-base;
   opacity: 0;
+  z-index: 888;
   &.show {
     opacity: 1;
   }

@@ -58,23 +58,11 @@
           }
         }
       }
-      &.wechat:before {
-        background-image: url('/assets/images/sound/share-wechat.png');
-      }
-      &.moments:before {
-        background-image: url('/assets/images/sound/share-moments.png');
-      }
-      &.tencent:before {
-        background-image: url('/assets/images/sound/share-tencent.png');
-      }
-      &.weibo:before {
-        background-image: url('/assets/images/sound/share-weibo.png');
-      }
-      &.qzone:before {
-        background-image: url('/assets/images/sound/share-qzone.png');
-      }
-      &.copy:before {
-        background-image: url('/assets/images/sound/share-copy.png');
+      $icon-list: wechat moments tencent weibo qzone copy;
+      @each $icon in $icon-list {
+        &.#{$icon}:before {
+          background-image: url('/assets/images/icons-share@2x/share-#{$icon}.png');
+        }
       }
     }
   }

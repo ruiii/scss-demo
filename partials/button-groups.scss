@@ -11,13 +11,17 @@
     height: 36px;
     line-height: 25px;
     transition: $screen-trans;
-    &:first-child .btn {
-      border-top-left-radius: $border-small;
-      border-bottom-left-radius: $border-small;
+    &:first-child {
+      &.btn, .btn {
+        border-top-left-radius: $border-small;
+        border-bottom-left-radius: $border-small;
+      }
     }
-    &:last-child .btn {
-      border-top-right-radius: $border-small;
-      border-bottom-right-radius: $border-small;
+    &:last-child {
+      &.btn, .btn {
+        border-top-right-radius: $border-small;
+        border-bottom-right-radius: $border-small;
+      }
     }
   }
   .btn {

@@ -24,12 +24,6 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    @media screen and (max-width: 480px) {
-      padding: 6%;
-      .share-item {
-        margin: 5%;
-      }
-    }
     .share-item {
       display: inline-block;
       position: relative;
@@ -69,6 +63,12 @@
         &.#{$icon}:before {
           background-image: url('/assets/images/icons-share@2x/share-#{$icon}.png');
         }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      padding: 6%;
+      .share-item {
+        margin: 5%;
       }
     }
   }

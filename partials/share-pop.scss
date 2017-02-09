@@ -24,6 +24,12 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+      padding: 6%;
+      .share-item {
+        margin: 5%;
+      }
+    }
     .share-item {
       display: inline-block;
       position: relative;
@@ -35,9 +41,6 @@
       font-size: $font-size-base;
       text-align: center;
       color: $mid-black;
-      @media screen and (max-width: 480px) {
-        margin: 20px;
-      }
       &:before {
         content: "";
         display: block;

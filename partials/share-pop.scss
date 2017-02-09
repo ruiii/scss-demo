@@ -19,7 +19,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 6%;
+    padding: 25px;
     background-color: $white;
     justify-content: space-around;
     align-items: center;
@@ -27,7 +27,7 @@
     .share-item {
       display: inline-block;
       position: relative;
-      margin: 5%;
+      margin: 10px;
       flex: 1 1 auto;
       height: 76px;
       line-height: 18px;
@@ -35,6 +35,9 @@
       font-size: $font-size-base;
       text-align: center;
       color: $mid-black;
+      @media screen and (max-width: 480px) {
+        margin: 20px;
+      }
       &:before {
         content: "";
         display: block;

@@ -262,6 +262,12 @@
       border-radius: $border-half;
       cursor: pointer;
       transition: background-color $hover-trans;
+      &:after {
+        content: '';
+        position: absolute;
+        top: (36px - 18px) / 2;
+        left: (36px - 18px) / 2;
+      }
     }
     .login-qq {
       margin-left: 90px;

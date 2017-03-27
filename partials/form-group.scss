@@ -290,8 +290,7 @@
     }
   }
   .form-img-title {
-    @include bg-img(175px, 39px);
-    background-position: -686px -952px;
+    @include sprite-icon(index/title-logo, 172px, 32px);
   }
 }
 :root #check-row-before,

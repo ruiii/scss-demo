@@ -12,14 +12,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-line-clamp: $lines;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $lines;
   box-orient: vertical;
   line-clamp: $lines;
   line-height: $height / $lines;
+  -webkit-box-pack: inherit;
+  -ms-flex-pack: inherit;
 }
 
 @mixin bg-img($width, $height: $width) {

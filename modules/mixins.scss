@@ -11,13 +11,20 @@
   word-break: break-all;
   text-overflow: ellipsis;
   overflow: hidden;
+
   display: -moz-box;
   display: -webkit-box;
+
   box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+
   line-clamp: $lines;
+  -moz-line-clamp: $lines;
+  -webkit-line-clamp: $lines;
+
   line-height: $height / $lines;
-  -webkit-box-pack: inherit;
-  -ms-flex-pack: inherit;
+
 }
 
 @mixin bg-img($width, $height: $width) {

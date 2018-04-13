@@ -129,22 +129,22 @@
   }
   #username, #tel, #email {
     i {
-      @include sprite-icon(member/username, 24px);
+      @include sprite-icon-2x(member/username, 24px);
     }
   }
   #password, #re-password {
     i {
-      @include sprite-icon(member/password, 24px);
+      @include sprite-icon-2x(member/password, 24px);
     }
   }
   #verification {
     i {
-      @include sprite-icon(member/captcha, 24px);
+      @include sprite-icon-2x(member/captcha, 24px);
     }
   }
   #nickname {
     i {
-      @include sprite-icon(member/nickname, 24px);
+      @include sprite-icon-2x(member/nickname, 24px);
     }
   }
   .btn-red-img {
@@ -276,7 +276,7 @@
         background-color: #4db3ee;
       }
       &:after {
-        @include sprite-icon(member/login-qq, 18px);
+        @include sprite-icon-2x(member/login-qq, 18px);
       }
     }
     .login-weibo {
@@ -285,12 +285,12 @@
         background-color: #ea5c58;
       }
       &:after {
-        @include sprite-icon(member/login-weibo, 18px);
+        @include sprite-icon-2x(member/login-weibo, 18px);
       }
     }
   }
   .form-img-title {
-    @include sprite-icon(index/title-logo, 172px, 32px);
+    @include sprite-icon-2x(index/title-logo, 172px, 32px);
   }
 }
 :root #check-row-before,

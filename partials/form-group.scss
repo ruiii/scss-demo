@@ -319,9 +319,15 @@
 }
 :root #check-row-before:checked + label:after,
 :root #modal-check-row-before:checked + label:after {
-  content: '✔';
-  color: $white;
-  top: -1px;
-  left: 5px;
+  content: "";
+  display: block;
   position: absolute;
+  top: 0;
+  bottom: 4px;
+  width: 4px;
+  height: 10px;
+  margin: auto;
+  transform: rotate(-145deg);
+  border-top: 2px solid $white;
+  border-left: 2px solid $white;
 }
